@@ -1,0 +1,25 @@
+<header>
+<h2>{[{ news.title }]}</h2>
+</header>
+<hr />
+<h4 class="source">{[{ news.source }]}</h4>
+<div class="timeago">
+  <time class="timeago" datetime="{[{ news.published_at }]}">{[{ news.published_at | date: 'dd MMMM yyyy HH:mm:ss' }]}</time><br /><br />
+</div>
+<article>{[{ news.content }]}</article>
+<hr />
+<footer>
+  <div ng-show="news.stat.reads" class="reads">{[{ news.stat.reads }]} Views</div>
+  <div ng-show="news.stat.likes" class="likes">{[{ news.stat.likes }]} Likes</div>
+  <div ng-show="news.stat.dislikes" class="dislikes">{[{ news.stat.dislikes }]} Dislikes</div>
+  <div ng-show="news.stat.shares" class="shares">{[{ news.stat.shares}]} Shares</div>
+  <br />
+  <a href="{[{ news.url }]}" target="_blank"><button type="button">Visit Website</button></a>
+  <button type="button" ng-hide="news.activity.like" ng-click="post_like()">Like</button>
+  <button type="button" ng-show="news.activity.like" ng-click="post_unlike()">Unlike</button>
+  <button type="button" ng-hide="news.activity.dislike" ng-click="post_dislike()">Dislike</button>
+  <button type="button" ng-show="news.activity.dislike" ng-click="post_canceldislike()">Cancel Dislike</button>
+  <button type="button">Share Twitter</button>
+  <button type="button">Share Facebook</button>
+</footer>
+<br /><br/>

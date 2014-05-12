@@ -1,0 +1,103 @@
+body { 
+    padding-top:60px;
+}
+
+.news_overview {
+    //width: 640px;
+}
+
+h4 {
+    padding-bottom: 10px;
+}
+
+ul.realtime-newsfeed,
+ul.newsfeed {
+    margin: 0;
+}
+
+ul.realtime-newsfeed li,
+ul.newsfeed li {
+    border-top: 1px solid #ccc;
+    padding: 0.4em 0 0.4em 1.1em; 
+    list-style: none;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+ul.realtime-newsfeed li:hover,
+ul.newsfeed li:hover {
+    background-color: #eee;
+}
+
+ul.realtime-newsfeed li a, 
+ul.newsfeed li a {
+    display: block;
+    color: #0074cc;
+}
+
+ul.realtime-newsfeed li a:hover, 
+ul.newsfeed li a:hover {
+    text-decoration: none;
+    color: #0074cc;
+}
+
+ul.realtime-newsfeed li a:visited,
+ul.realtime-newsfeed li a:visited .source, 
+ul.realtime-newsfeed li a:visited time,
+ul.newsfeed li a:visited,
+ul.newsfeed li a:visited .source, 
+ul.newsfeed li a:visited time {
+    //color: #ccc;
+}
+
+ul.newsfeed li a .source {
+    float: left;
+    display: inline-block;
+    width: 15%;
+    color: #434343;
+}
+
+ul.newsfeed li a .title {
+    float: left;
+    width: 80%;
+}
+
+ul.newsfeed li a .timeago {
+    color: #434343;
+    width: 100%;
+    text-align: right;
+}
+ul.newsfeed li a .likes {
+    width: 100%;
+    text-align: right;
+}
+
+ul.realtime-newsfeed li a .source {
+    float: left;
+    display: inline-block;
+    width: 15%;
+    font-weight: bold;
+}
+
+ul.realtime-newsfeed li a .title {
+    float: left;
+    width: 80%;
+    font-weight: bold;
+}
+
+ul.realtime-newsfeed li a:visited .title {
+    float: left;
+    width: 80%;
+    color: #ccc;
+    font-weight: normal;
+}
+
+ul.realtime-newsfeed li a .timeago {
+    width: 100%;
+    font-weight: bold;
+    text-align: right;
+}
+
+.spinning {
+//    overflow: auto;
+}

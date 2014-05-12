@@ -1,0 +1,42 @@
+<h4>About Me</h4>
+
+<img ng-src="{[{ current_user.profile_image_url }]}" /><br /><br />
+
+<strong>{[{ user.user.first_name }]} {[{ user.user.last_name }]}</strong><br />
+{[{ user.description }]}<br />
+{[{ user.location }]} | {[{ user.homepage }]}<br />
+
+<hr />
+<strong>Read</strong>
+<ul>
+  <li ng-repeat="read in user.reads">
+  <div>{[{ read.article.title }]}</div>
+  </li>
+</ul>
+
+<hr />
+
+<strong>Like</strong>
+<ul>
+  <li ng-repeat="like in user.likes">
+  <div>{[{ like.article.title }]}</div>
+  </li>
+</ul>
+
+<hr />
+
+<strong>Dislike</strong>
+<ul>
+  <li ng-repeat="dislike in user.dislikes">
+  <div>{[{ dislike.article.title }]}</div>
+  </li>
+</ul>
+
+<hr />
+
+<strong>Share</strong>
+<ul>
+  <li ng-repeat="share in user.shares">
+  <div>{[{ share.article.title }]}</div>
+  </li>
+</ul>

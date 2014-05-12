@@ -1,0 +1,20 @@
+<div class="news_overview" when-scrolled="loadMore()" newsfeed="newsfeed">
+  <h4>Newsfeed</h4>
+  <ul class="realtime-newsfeed"></ul>
+  <ul class="newsfeed">
+    <li class="news" ng-repeat="news in newsfeed">
+    <!--<a href="{[{ news.url }]}" target="_blank">-->
+      <a href="#/news/{[{ news.id }]}">
+        <div class="source">{[{ news.source }]}</div>
+        <div class="title">{[{ news.title }]}</div>
+        <div class="timeago">
+          <time class="timeago" datetime="{[{ news.published_at }]}">{[{ news.timeago }]}</time>
+        </div>
+        <div ng-show="news.stat.likes" class="likes">{[{ news.stat.likes }]} Likes</div>
+        <div ng-show="news.stat.dislikes" class="dislikes">{[{ news.stat.dislikes }]} Dislikes</div>
+        <div ng-show="news.stat.shares" class="shares">{[{ news.stat.shares}]} Shares</div>
+      </a>
+    </li>
+  </ul> 
+  <ul class="spinning"></ul>
+</div>

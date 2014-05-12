@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <button type="button" class="close" ng-click="cancel()">x</button>
+  <h2>{[{ news.title }]}</h2>
+</div>
+
+<div class="modal-body"> 
+  <article>{[{ news.content }]}</article>
+</div>
+
+<div class="modal-footer"> 
+  <div ng-show="news.stat.reads" class="reads">{[{ news.stat.reads }]} Views</div>
+  <div ng-show="news.stat.likes" class="likes">{[{ news.stat.likes }]} Likes</div>
+  <div ng-show="news.stat.dislikes" class="dislikes">{[{ news.stat.dislikes }]} Dislikes</div>
+  <div ng-show="news.stat.shares" class="shares">{[{ news.stat.shares}]} Shares</div>
+  <br />
+  <a href="{[{ news.url }]}" target="_blank"><button type="button">Visit Website</button></a>
+  <button type="button" ng-hide="news.activity.like" ng-click="post_like()">Like</button>
+  <button type="button" ng-show="news.activity.like" ng-click="post_unlike()">Unlike</button>
+  <button type="button" ng-hide="news.activity.dislike" ng-click="post_dislike()">Dislike</button>
+  <button type="button" ng-show="news.activity.dislike" ng-click="post_canceldislike()">Cancel Dislike</button>
+  <button type="button">Share Twitter</button>
+  <button type="button">Share Facebook</button>
+</div>
